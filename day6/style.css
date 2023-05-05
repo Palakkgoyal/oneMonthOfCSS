@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(6, 48, 48);
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0.8)
+    );
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    border: 1px solid;
+    margin: 20px;
+    border-radius: 0.5rem;
+}
+
+.bg1{
+    background-color: antiquewhite;
+    background-image: linear-gradient(rgba(128, 128, 128, 0.5) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(254, 192, 203, 0.8) 50%, transparent 50%)
+    ;
+    background-size: 20px 20px;
+}
+
+.bg2{
+    background: 
+    linear-gradient(
+        135deg,
+        antiquewhite 25%,
+        transparent 25%
+    ) 50px 0,
+    linear-gradient(
+        225deg,
+        antiquewhite 25%,
+        transparent 25%
+    ) 50px 0,
+   linear-gradient(
+        315deg,
+        antiquewhite 25%,
+        transparent 25%
+    ),
+    linear-gradient(
+        45deg,
+        antiquewhite 25%,
+        transparent 25%
+        );
+    background-color: #782345;
+
+    background-size: 20px 20px;
+}
+
+.bg3{
+    background-color: rgb(34, 31, 31);
+    background-image: 
+    radial-gradient(
+        circle,
+        transparent 0.6rem,
+        rgb(255,0,255,.5) 0.3rem
+    ),
+    linear-gradient(
+        teal 0.2rem,
+        transparent 0.2rem
+    ),
+    linear-gradient(
+        90deg,
+        teal 0.2rem,
+        transparent 0.2rem
+    )
+    
+    ;
+    background-position: 1.11rem 1rem, 0 -0.1rem, 0 0;
+    background-size: 2rem 2rem;
+}
