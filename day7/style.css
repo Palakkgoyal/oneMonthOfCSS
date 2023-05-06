@@ -1,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    background-color: rgb(38, 36, 36);
+    width: 100vw;
+    min-height: 100vh;
+    padding: 20px;
+    display: flex;
+    gap: 8rem;
+}
+
+.box{
+    width: 500px;
+    height: 500px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.bg1{
+    background-color: #232221;
+    background-image: 
+    radial-gradient(
+        circle at 100% 50%,
+        transparent 1rem,
+        #a1b1c1 1rem,
+        #a1b1c1 1.5rem,
+        transparent 1.5rem
+    ),
+    radial-gradient(
+        circle at 0% 50%,
+        transparent 1rem,
+        #a1b1c1 1rem,
+        #a1b1c1 1.5rem,
+        transparent 1.5rem
+    );
+
+    background-position: 0 0, 0 -2.5rem;
+
+    background-size: 5rem 5rem;
+}
+
+.bg2{
+    background-color: rgb(28, 28, 86);
+    background-image: conic-gradient(
+        from 330deg at 50% 60%,
+        #11ffbb 60deg,
+        transparent 60deg
+    ),
+    conic-gradient(
+        from 150deg at 50% 30%,
+        #5255bb 60deg,
+        transparent 60deg
+    );
+    background-position: 0 0, 1.5rem .5rem;
+    background-size: 3rem 3rem;
+}
