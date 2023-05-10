@@ -1,0 +1,100 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(112, 91, 91);
+}
+
+@property --color-1{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: red;
+}
+@property --color-2{
+    syntax: "<color>";
+    inherits: true;
+    initial-value: blue;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(
+        0deg,
+        rgb(34, 34, 210),
+        transparent
+    );
+    flex-direction: column;
+    gap: 2rem;
+}
+button{
+    padding: 8px 25px;
+    color: white;
+    cursor: pointer;
+    background: linear-gradient(
+        90deg,
+        var(--color-1),
+        var(--color-2)
+    );
+    font-size: 40px;
+    transition: 
+        --color-1 1000ms,
+        --color-2 2000ms 1000ms
+    ;
+    border-radius: 10px;
+}
+
+button:hover,
+button:focus-visible{
+    --color-1: blue;
+    --color-2: red;
+    background: linear-gradient(
+        90deg,
+        --color-1,
+        --color-2
+    );
+    /* transform: translateY(-1rem); */
+    /* transition: transform 500ms; */
+}
+
+.party-time{
+    animation: party 1000ms, party 2000ms 1500ms,
+        party 5000ms 4000ms
+    ;
+}
+
+@keyframes party {
+    /* 0%, 50%{
+        background-color: red;
+    }
+    25%, 75%{
+        background-color: orange;
+    } */
+
+    50%{
+        background-color: rgb(74, 74, 149);
+        rotate: 180deg;
+    }
+}
+
+.dots{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.dot{
+    width: 10px;
+    aspect-ratio: 1;
+    background-color: brown;
+    border-radius: 50%;
+}
+
+.dot.dance{
+    animation: rise 2000ms infinite alternate;
+}
+
+@keyframes rise {
+    100%{ transform: translateY(-100px) }
+}
