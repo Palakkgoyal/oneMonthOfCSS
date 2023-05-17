@@ -1,0 +1,42 @@
+.example1{
+    background-color: aliceblue;
+}
+
+.example1 :is(span, a, .specialP){
+    color: pink;
+}
+
+/* In the is() pseudo selector the element with highest specificity is applied to all. 
+    So above => .example1 span 
+    ||has a specificity of||
+    .example1 .specialP
+*/
+
+.example1 span,
+.example1 a,
+.example1 .specialP{
+    color: blue;
+}
+
+/* where() pseudo selector */
+
+.example2{
+    background-color: antiquewhite;
+}
+
+.example2 p{
+    color: chartreuse;
+}
+
+.example2 :where(p, span, #link){
+    color: purple;
+}
+:where(.example2) :where(p, span, #link){
+    color: gray;
+}
+
+/* where() has no specificity */
+
+.example3 :has(p){
+    background-color: yellow;
+}
