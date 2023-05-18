@@ -1,0 +1,44 @@
+div{
+    border: 30px solid;
+    width: 25vw;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    display: inline-block;
+}
+
+.ex-1{
+    border-image-source: url(bg.jpeg);
+    border-image-slice: 60;
+}
+
+.ex-2{
+    border-image-source: linear-gradient(
+        red,
+        blue
+    );
+    border-image-slice: 60;
+}
+
+.ex-3{
+    border: 5px solid;
+    border-image-source: linear-gradient(
+        90deg,
+        red 50%,
+        blue 50%
+    );
+    border-image-slice: 60;
+}
+
+.ex-4{
+    border: none;
+    padding: 10px;
+    border-block-start: 4px solid;
+    border-inline-start: 3px solid;
+    border-image-source: radial-gradient(
+        circle at top left,
+        limegreen,
+        transparent 50%
+    );
+    border-image-slice: 2;
+}
