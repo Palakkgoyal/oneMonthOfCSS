@@ -1,0 +1,99 @@
+.isolation-section{
+    padding: 40px;
+    background-color: darkblue;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.isolation{
+    position: relative;
+    isolation: isolate;
+}
+
+.isolation::before{
+    content: open-quote;
+    font-family: serif;
+    font-weight: 900;
+    font-size: 15rem;
+    color:#3c3c3c;
+    position: absolute;
+    z-index: -1;
+    top: -2rem;
+    left: -2.5rem;
+}
+
+.isolation::after{
+    content: no-close-quote;
+}
+
+section{
+    padding: 40px;
+    color: white;
+    border-top: 5px dotted yellow;
+    background-color: black;
+    margin-bottom: 1px;
+    counter-increment: section-counter;
+}
+
+.inset-section{
+    position: relative;
+    height: 10rem;
+}
+
+.inset{
+    position: absolute;
+    inset: 1rem 2rem 1rem 50%;
+    background-color: purple;
+    padding: 1rem;
+}
+
+.section-title::before{
+    content: counter(section-counter) ". ";
+}
+
+.filter-section{
+    background-color: rgb(94, 87, 87);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+img{
+    filter: grayscale(100%) contrast(54%);
+    /* filter: invert(100%); */
+    transition: filter 700ms;
+    cursor: pointer;
+}
+
+img:hover,
+section:has(button:hover) > img{
+    filter: grayscale(0) contrast(100%);
+} 
+
+button{
+    background-color: transparent;
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: 1px solid;
+    transition: box-shadow 500ms;
+    cursor: pointer;
+    filter: invert(100%)
+            drop-shadow(1px 1px 3px pink);
+}
+
+button:hover{
+    box-shadow: 1px 1px 4px pink, -1px -1px 4px pink;
+}
+
+.contain-section{
+    contain: style;
+}
+
+.contain-section .section-title{
+    font-size: 1.5rem;
+    counter-increment: section-counter;
+}
