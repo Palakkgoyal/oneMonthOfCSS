@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container{
+    height: 100vh;
+    width: 100%;
+    background-color: #ebeef1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    font-size: 32px;
+    font-weight: 500;
+    padding: 20px;
+    margin: 30px;
+    width: 350px;
+    background-color: #ebeef1;
+    cursor: pointer;
+    border: none;
+    color: #00a037;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px -1px rgba(10, 99, 169, 0.16), -10px -10px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+.reject{
+    color: #ed0000;
+    box-shadow: inset 10px 10px 10px -1px rgba(10, 99, 169, 0.16), inset -10px -10px 10px -1px rgba(255, 255, 255, 0.7);
+}
+
+i{
+    margin-right: 20px;
+}
