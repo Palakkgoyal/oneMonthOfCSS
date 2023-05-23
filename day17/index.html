@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day 17 (Progressive scroll bar)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="progressbar"></div>
+    <div id="scrollPath"></div>
+    <section>
+        <h2>Creative Scroll Progress Bar</h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, voluptas. Fuga repellat consectetur minima, aperiam quo soluta. Recusandae sunt dolor aliquam culpa possimus itaque velit mollitia maiores officiis ullam explicabo, voluptatibus quos porro ex labore dolores laborum dolorum doloribus? Nihil at ipsa quasi, adipisci tempore facilis eos necessitatibus pariatur deleniti nisi repudiandae alias magnam, tenetur dolorem quo est rem corrupti similique aperiam maxime unde sed odit! Itaque consequuntur assumenda officia ex rem unde nesciunt, corrupti placeat laudantium dolores at quisquam alias id hic, consequatur architecto maiores cum aut, saepe repudiandae eum! Culpa, minima quaerat sint ab totam maxime aliquam facere! Cumque impedit officia quibusdam laboriosam, error nobis laudantium vel! Eveniet, aut cumque. At repellendus ducimus rerum nisi. Pariatur eum id deleniti quam aliquid excepturi cumque modi incidunt, doloribus veritatis mollitia, a, quasi consectetur dolores eos omnis? Quidem sunt debitis repudiandae molestiae non accusantium porro ipsum, ad iste? Nisi quis magnam delectus repellat neque repellendus adipisci assumenda necessitatibus, distinctio debitis ipsum deserunt minima placeat fugiat nulla! Quibusdam repellendus sapiente sint consequatur harum, reprehenderit iusto dicta vitae ducimus. Nemo, quas aperiam reprehenderit dolorem laboriosam blanditiis similique doloribus eveniet sapiente cupiditate voluptates libero expedita impedit repellendus nam voluptatem, sunt ad numquam. Incidunt rem neque, eaque vitae quas quo, optio reiciendis deleniti dignissimos accusantium, cupiditate sapiente nesciunt omnis corrupti molestias esse? Explicabo maxime, eum alias facere praesentium dolorem quod doloremque voluptates eaque deleniti vitae nostrum! Voluptatem illum rerum veniam id obcaecati cum doloremque, voluptates atque, enim nemo aliquid adipisci error ex saepe nobis aspernatur eaque harum vel quos! Facere nobis, harum nulla non saepe totam eveniet velit id rerum quidem. Tempora consequuntur nostrum neque necessitatibus rem voluptatem ad laboriosam, voluptatum repudiandae distinctio, illo iure sequi ducimus suscipit vel quo similique eius at, enim quas commodi. Corrupti dicta aperiam alias consequuntur, aut ducimus consequatur pariatur?
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod ducimus accusamus laboriosam laudantium! Molestias unde aliquid ipsa. Iure adipisci quaerat recusandae facilis sapiente eum corporis provident dolores reiciendis earum sunt voluptas optio, fuga est velit beatae magni unde? Ad id iusto fugiat error dolorem praesentium provident quam reiciendis sapiente placeat ratione, cum minima quae, blanditiis ipsum, nam dicta perferendis neque laborum optio veritatis temporibus ut voluptates. Sunt incidunt omnis enim illum dolores vitae porro aspernatur accusamus voluptates adipisci officiis animi voluptate labore, maxime numquam, aperiam tempore repellendus laboriosam molestiae. Vero repellendus ullam neque consequatur! Voluptatem laborum quam nobis eum voluptates.
+        </p>
+    </section>
+    <script>
+        let progressbar = document.getElementById('progressbar');
+        let totalHeight = document.body.scrollHeight - window.innerHeight;
+        window.onscroll = function(){
+            let progressHeight = (window.pageYOffset / totalHeight) * 100;
+            progressbar.style.height = progressHeight + "%";
+        }
+    </script>
+</body>
+</html>
