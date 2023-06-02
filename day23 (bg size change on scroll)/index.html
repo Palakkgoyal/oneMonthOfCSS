@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day23 (background image size change on scroll)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header></header>
+    <section>
+        <h2>
+            Background Size Change During Scroll
+        </h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid odit enim numquam quas atque voluptatem, vero, dolore qui odio provident at quos aut officia dolorem recusandae iste quo eos! Reiciendis voluptates sunt velit officiis nostrum repudiandae impedit quidem, dolor, explicabo temporibus minus rem, in cupiditate. Officiis similique optio quos ipsa facilis saepe iusto doloribus accusantium maxime incidunt omnis doloremque nostrum blanditiis esse suscipit dolorem culpa, aperiam reiciendis eos voluptatibus animi ea et earum. <br> Beatae quos dolore corporis dolores impedit quibusdam obcaecati illum at tempora veritatis, praesentium placeat aliquid incidunt assumenda officiis minus veniam? Ex quam laborum quos, distinctio est minima impedit magnam. Fuga accusantium totam culpa nostrum, fugit veritatis adipisci perspiciatis animi ex repellat distinctio quas aspernatur sapiente. Mollitia dolorum nulla, sapiente minus, et maxime ipsam officia inventore suscipit, libero quidem porro maiores vel reiciendis nisi? Modi ipsa iure saepe earum veritatis at eveniet, iste fuga impedit dolorem vitae quo! Similique beatae, excepturi, quod, corrupti atque nostrum hic consectetur deserunt repudiandae nobis omnis qui fuga perspiciatis. <br> Excepturi nihil repellendus minima sed, eum ipsum distinctio ad adipisci inventore voluptate beatae animi quas corrupti voluptatum quaerat vitae enim id mollitia aperiam aut? Cupiditate, sint et odit iste magni itaque sunt. In minus inventore doloribus sunt fuga autem eligendi laborum corrupti voluptate eos praesentium sapiente, quibusdam nulla quos ipsum quasi cum eaque incidunt. Consequatur maiores reiciendis minima temporibus voluptas nostrum est asperiores sunt, in aut architecto explicabo, veritatis eius sint modi odio ipsum, quod eum voluptatem officia harum minus necessitatibus iste. Ex, doloremque similique. Nisi voluptatum, molestiae quidem magnam veniam quibusdam dicta nemo repellendus dolores, libero ut quis modi quod. Possimus amet dolorem consequatur sequi recusandae quia et numquam incidunt, aliquid beatae provident est, ullam corporis voluptas non accusantium obcaecati, nam ex harum excepturi. Modi ad iusto minima, quidem maxime veniam alias dolor.
+        </p>
+    </section>
+
+    <script>
+        const bg = document.querySelector('header')
+        window.addEventListener('scroll', () => {
+            bg.style.backgroundSize = 160 +  +window.pageYOffset/11 + '%'
+            bg.style.opacity = 1 - +window.pageYOffset/700 + ""
+        })
+    </script>
+</body>
+</html>
