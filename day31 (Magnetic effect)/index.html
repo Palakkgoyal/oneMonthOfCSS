@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>day31 (Magnetic Effect using CSS and JS)</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        Magnetic
+    </div>
+
+    <script>
+        let box = document.querySelector(".box")
+        box.addEventListener("mouseover", (e) => {
+            let x = e.offsetX
+            let y = e.offsetY
+            let boxWidth = box.clientWidth
+            let boxHeight = box.clientHeight
+            let moveX = (x - boxWidth/2)
+            let moveY = (y - boxHeight/2)
+            box.style.transform = `translateX(${moveX}px) translateY(${moveY}px)`
+        })
+
+        box.addEventListener("mouseout", (e) => {
+            box.style.transform = ``
+        })
+    </script>
+</body>
+</html>
